@@ -35,6 +35,7 @@ function scrollToShowNavbar() {
     if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
         addClassToID("navbarMain", "navbar__onscroll");
         addClassToID("navbarContainer", "fixed-top");
+        getEle('logo__small').style.display = 'none';
         // getEle("navbarContainer").style.maxWidth = "100%";
         // alert('200');
     }
@@ -42,7 +43,7 @@ function scrollToShowNavbar() {
     else {
         removeClassFromID("navbarMain", "navbar__onscroll");
         removeClassFromID("navbarContainer", "fixed-top");
-
+        getEle('logo__small').style.display = 'block';
         // alert('Nthi')
     };
 };
